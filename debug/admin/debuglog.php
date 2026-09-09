@@ -38,6 +38,10 @@ $content = debug_file_read( 'wp-content/debug.log' );
 			<a class="button" href="<?php echo esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=debug_download_log' ), 'debug_download_log' ) ); ?>">
 				<?php esc_html_e( 'Download Log', 'debug' ); ?>
 			</a>
+			<label for="debug-log-refresh" style="margin-left:12px;">
+				<input type="checkbox" id="debug-log-refresh" name="debug-log-refresh" value="1">
+				<?php esc_html_e( 'Auto-refresh every 5s', 'debug' ); ?>
+			</label>
 		</p>
 
 		<pre id="debug-log"><?php echo esc_html( $content ); ?></pre>

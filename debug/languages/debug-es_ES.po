@@ -1,0 +1,233 @@
+# Copyright (C) 2026 SoniNow Team
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Debug 1.14\n"
+"Report-Msgid-Bugs-To: https://soninow.com/contact\n"
+"POT-Creation-Date: 2026-09-09 00:00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00:00+0000\n"
+"Last-Translator: SoniNow Team <support@soninow.com>\n"
+"Language-Team: Español <es_ES@li.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: OpenClaw\n"
+"X-Domain: debug\n"
+
+msgid "Invalid backup file."
+msgstr "Archivo de respaldo no válido."
+
+msgid "Backup file not found."
+msgstr "No se encontró el archivo de respaldo."
+
+msgid "Could not delete backup file. Check file permissions."
+msgstr "No se pudo eliminar el archivo de respaldo. Verifique los permisos del archivo."
+
+msgid "Backup file is not a valid wp-config.php."
+msgstr "El archivo de respaldo no es un wp-config.php válido."
+
+msgid "Could not restore wp-config.php. Check file permissions."
+msgstr "No se pudo restaurar wp-config.php. Verifique los permisos del archivo."
+
+msgid "File debug.log not removed."
+msgstr "El archivo debug.log no se eliminó."
+
+msgid "debug.log file removed successfully."
+msgstr "El archivo debug.log se eliminó correctamente."
+
+msgid "Security check failed. Please try again."
+msgstr "Falló la verificación de seguridad. Inténtelo de nuevo."
+
+msgid "You do not have permission to change debug settings."
+msgstr "No tiene permiso para cambiar los ajustes de depuración."
+
+msgid "Please enter a valid email address."
+msgstr "Ingrese una dirección de correo electrónico válida."
+
+msgid "Settings saved successfully."
+msgstr "Ajustes guardados correctamente."
+
+msgid "A backup of wp-config.php was created: %s"
+msgstr "Se creó un respaldo de wp-config.php: %s"
+
+msgid "wp-config.php was not found."
+msgstr "No se encontró wp-config.php."
+
+msgid "Could not read wp-config.php."
+msgstr "No se pudo leer wp-config.php."
+
+msgid "wp-config.php is not writable. Copy the code below into your wp-config.php file:"
+msgstr "wp-config.php no es escribible. Copie el código siguiente en su archivo wp-config.php:"
+
+msgid "Could not write wp-config.php."
+msgstr "No se pudo escribir wp-config.php."
+
+msgid "Error on %s (via Debug)"
+msgstr "Error en %s (vía Depurador)"
+
+msgid "Error Reporting"
+msgstr "Informe de errores"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Level:"
+msgstr "Nivel:"
+
+msgid "Message:"
+msgstr "Mensaje:"
+
+msgid "File:"
+msgstr "Archivo:"
+
+msgid "Context:"
+msgstr "Contexto:"
+
+msgid "Please enter a valid notification email address first."
+msgstr "Ingrese primero una dirección de correo de notificación válida."
+
+msgid "Please enable Email Notification before sending a test."
+msgstr "Active la notificación por correo antes de enviar una prueba."
+
+msgid "Test notification from Debug on %s"
+msgstr "Notificación de prueba de Depurador en %s"
+
+msgid "This is a test notification."
+msgstr "Esta es una notificación de prueba."
+
+msgid "Time:"
+msgstr "Hora:"
+
+msgid "Status:"
+msgstr "Estado:"
+
+msgid "Debug plugin email notifications are working."
+msgstr "Las notificaciones por correo del complemento Depurador funcionan."
+
+msgid "Could not send the test notification. Check your mail setup."
+msgstr "No se pudo enviar la notificación de prueba. Verifique su configuración de correo."
+
+msgid "You do not have permission to send a test notification."
+msgstr "No tiene permiso para enviar una notificación de prueba."
+
+msgid "Test notification sent successfully."
+msgstr "Notificación de prueba enviada correctamente."
+
+msgid "Invalid file for download."
+msgstr "Archivo no válido para descargar."
+
+msgid "File not found or unreadable."
+msgstr "Archivo no encontrado o ilegible."
+
+msgid "You do not have permission to download files."
+msgstr "No tiene permiso para descargar archivos."
+
+msgid "Security check failed."
+msgstr "Falló la verificación de seguridad."
+
+msgid "You do not have permission to manage wp-config backups."
+msgstr "No tiene permiso para administrar los respaldos de wp-config."
+
+msgid "Security check failed for restore."
+msgstr "Falló la verificación de seguridad para la restauración."
+
+msgid "Backup deleted successfully."
+msgstr "Respaldo eliminado correctamente."
+
+msgid "wp-config.php restored from backup."
+msgstr "wp-config.php restaurado desde el respaldo."
+
+msgid "Old backup pruned (kept the latest %d)."
+msgid_plural "%d old backups pruned (kept the latest set)."
+msgstr[0] "Respaldo antiguo eliminado (se conservó el más reciente %d)."
+msgstr[1] "%d respaldos antiguos eliminados (se conservó el conjunto más reciente)."
+
+msgid "Debug"
+msgstr "Depurador"
+
+msgid "Settings"
+msgstr "Ajustes"
+
+msgid "Error Log"
+msgstr "Registro de errores"
+
+msgid "You do not have permission to access this page."
+msgstr "No tiene permiso para acceder a esta página."
+
+msgid "Debug Settings"
+msgstr "Ajustes de depuración"
+
+msgid "Debug settings"
+msgstr "Ajustes de depuración"
+
+msgid "Enable Email Notification"
+msgstr "Habilitar notificación por correo"
+
+msgid "Email Address"
+msgstr "Dirección de correo electrónico"
+
+msgid "Enable Error Reporting"
+msgstr "Habilitar informe de errores"
+
+msgid "Create Error Log in File"
+msgstr "Crear registro de errores en archivo"
+
+msgid "Display Errors on the website"
+msgstr "Mostrar errores en el sitio web"
+
+msgid "Enable Script Debug"
+msgstr "Habilitar depuración de script"
+
+msgid "Enable Save Queries"
+msgstr "Habilitar guardar consultas"
+
+msgid "These settings update your wp-config.php file. A timestamped backup is created automatically before each save; you can restore it below."
+msgstr "Estos ajustes actualizan su archivo wp-config.php. Se crea un respaldo con marca de tiempo automáticamente antes de cada guardado; puede restaurarlo abajo."
+
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+msgid "Send Test Notification"
+msgstr "Enviar notificación de prueba"
+
+msgid "Sends a test email to verify your notification setup."
+msgstr "Envía un correo de prueba para verificar su configuración de notificaciones."
+
+msgid "wp-config.php Backups & Restore"
+msgstr "Respaldos y restauración de wp-config.php"
+
+msgid "The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state. The latest 10 backups are kept automatically."
+msgstr "Las copias de seguridad más recientes se muestran primero. Restaurar devuelve tu wp-config.php a ese estado guardado. Las 10 copias de seguridad más recientes se conservan automáticamente."
+
+msgid "Backup file"
+msgstr "Archivo de respaldo"
+
+msgid "Action"
+msgstr "Acción"
+
+msgid "Restore"
+msgstr "Restaurar"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Debug Log"
+msgstr "Registro de depuración"
+
+msgid "Clear Log"
+msgstr "Borrar registro"
+
+msgid "Download Log"
+msgstr "Descargar registro"
+
+msgid "Auto-refresh every 5s"
+msgstr "Actualizar automáticamente cada 5 s"
+
+msgid "No Log File Found"
+msgstr "No se encontró archivo de registro"
+
+msgid "Debug your WordPress site, multisite and plugins. Debug is a development/production tool that helps you remove bugs from your WordPress website."
+msgstr "Depura tu sitio WordPress, multisitio y plugins. Debug es una herramienta de desarrollo/producción que te ayuda a eliminar errores de tu sitio web WordPress."
+

@@ -52,11 +52,50 @@
 				}
 			});
 		});
+
+		document.querySelectorAll('.debug-delete-btn').forEach(function (btn) {
+			btn.addEventListener('click', function (e) {
+				if (!window.confirm('Delete this wp-config.php backup?')) {
+					e.preventDefault();
+				}
+			});
+		});
+	}
+
+	/**
+	 * Auto-refresh the error-log viewer every few seconds while enabled.
+	 */
+	function initLogRefresh() {
+		var logPre = document.getElementById('debug-log');
+		var toggle = document.getElementById('debug-log-refresh');
+		if (!logPre || !toggle) {
+			return;
+		}
+		var timer = null;
+
+		function stop() {
+			if (timer) {
+				window.clearInterval(timer);
+				timer = null;
+			}
+		}
+
+		toggle.addEventListener('change', function () {
+			if (toggle.checked) {
+				stop();
+				timer = window.setInterval(function () {
+					window.location.reload();
+				}, 5000);
+			} else {
+				stop();
+			}
+		});
 	}
 
 	function init() {
 		initToggle();
 		initConfirmations();
+		initLogRefresh();
 	}
 
 	if (document.readyState === 'loading') {

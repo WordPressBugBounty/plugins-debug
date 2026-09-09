@@ -1,0 +1,233 @@
+# Copyright (C) 2026 SoniNow Team
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Debug 1.14\n"
+"Report-Msgid-Bugs-To: https://soninow.com/contact\n"
+"POT-Creation-Date: 2026-09-09 00:00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00:00+0000\n"
+"Last-Translator: SoniNow Team <support@soninow.com>\n"
+"Language-Team: Türkçe <tr_TR@li.org>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: OpenClaw\n"
+"X-Domain: debug\n"
+
+msgid "Invalid backup file."
+msgstr "Geçersiz yedek dosyası."
+
+msgid "Backup file not found."
+msgstr "Yedek dosyası bulunamadı."
+
+msgid "Could not delete backup file. Check file permissions."
+msgstr "Yedek dosyası silinemedi. Dosya izinlerini kontrol edin."
+
+msgid "Backup file is not a valid wp-config.php."
+msgstr "Yedek dosyası geçerli bir wp-config.php değil."
+
+msgid "Could not restore wp-config.php. Check file permissions."
+msgstr "wp-config.php geri yüklenemedi. Dosya izinlerini kontrol edin."
+
+msgid "File debug.log not removed."
+msgstr "debug.log dosyası silinmedi."
+
+msgid "debug.log file removed successfully."
+msgstr "debug.log dosyası başarıyla silindi."
+
+msgid "Security check failed. Please try again."
+msgstr "Güvenlik kontrolü başarısız oldu. Lütfen tekrar deneyin."
+
+msgid "You do not have permission to change debug settings."
+msgstr "Hata ayıklama ayarlarını değiştirme izniniz yok."
+
+msgid "Please enter a valid email address."
+msgstr "Lütfen geçerli bir e-posta adresi girin."
+
+msgid "Settings saved successfully."
+msgstr "Ayarlar başarıyla kaydedildi."
+
+msgid "A backup of wp-config.php was created: %s"
+msgstr "wp-config.php yedeği oluşturuldu: %s"
+
+msgid "wp-config.php was not found."
+msgstr "wp-config.php bulunamadı."
+
+msgid "Could not read wp-config.php."
+msgstr "wp-config.php okunamadı."
+
+msgid "wp-config.php is not writable. Copy the code below into your wp-config.php file:"
+msgstr "wp-config.php yazılabilir değil. Aşağıdaki kodu wp-config.php dosyanıza kopyalayın:"
+
+msgid "Could not write wp-config.php."
+msgstr "wp-config.php yazılamadı."
+
+msgid "Error on %s (via Debug)"
+msgstr "%s üzerinde hata (Hata Ayıklama ile)"
+
+msgid "Error Reporting"
+msgstr "Hata Raporlama"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Level:"
+msgstr "Düzey:"
+
+msgid "Message:"
+msgstr "Mesaj:"
+
+msgid "File:"
+msgstr "Dosya:"
+
+msgid "Context:"
+msgstr "Bağlam:"
+
+msgid "Please enter a valid notification email address first."
+msgstr "Önce geçerli bir bildirim e-posta adresi girin."
+
+msgid "Please enable Email Notification before sending a test."
+msgstr "Test göndermeden önce e-posta bildirimini etkinleştirin."
+
+msgid "Test notification from Debug on %s"
+msgstr "%s üzerinde Hata Ayıklama'dan test bildirimi"
+
+msgid "This is a test notification."
+msgstr "Bu bir test bildirimidir."
+
+msgid "Time:"
+msgstr "Saat:"
+
+msgid "Status:"
+msgstr "Durum:"
+
+msgid "Debug plugin email notifications are working."
+msgstr "Hata Ayıklama eklentisinin e-posta bildirimleri çalışıyor."
+
+msgid "Could not send the test notification. Check your mail setup."
+msgstr "Test bildirimi gönderilemedi. E-posta ayarlarınızı kontrol edin."
+
+msgid "You do not have permission to send a test notification."
+msgstr "Test bildirimi gönderme izniniz yok."
+
+msgid "Test notification sent successfully."
+msgstr "Test bildirimi başarıyla gönderildi."
+
+msgid "Invalid file for download."
+msgstr "İndirme için geçersiz dosya."
+
+msgid "File not found or unreadable."
+msgstr "Dosya bulunamadı veya okunamıyor."
+
+msgid "You do not have permission to download files."
+msgstr "Dosya indirme izniniz yok."
+
+msgid "Security check failed."
+msgstr "Güvenlik kontrolü başarısız oldu."
+
+msgid "You do not have permission to manage wp-config backups."
+msgstr "wp-config yedeklerini yönetme izniniz yok."
+
+msgid "Security check failed for restore."
+msgstr "Geri yükleme için güvenlik kontrolü başarısız oldu."
+
+msgid "Backup deleted successfully."
+msgstr "Yedek başarıyla silindi."
+
+msgid "wp-config.php restored from backup."
+msgstr "wp-config.php yedekten geri yüklendi."
+
+msgid "Old backup pruned (kept the latest %d)."
+msgid_plural "%d old backups pruned (kept the latest set)."
+msgstr[0] "Eski yedek temizlendi (en yeni %d korundu)."
+msgstr[1] "%d eski yedek temizlendi (en yeni set korundu)."
+
+msgid "Debug"
+msgstr "Hata Ayıklama"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Error Log"
+msgstr "Hata Günlüğü"
+
+msgid "You do not have permission to access this page."
+msgstr "Bu sayfaya erişim izniniz yok."
+
+msgid "Debug Settings"
+msgstr "Hata Ayıklama Ayarları"
+
+msgid "Debug settings"
+msgstr "Hata ayıklama ayarları"
+
+msgid "Enable Email Notification"
+msgstr "E-posta Bildirimini Etkinleştir"
+
+msgid "Email Address"
+msgstr "E-posta Adresi"
+
+msgid "Enable Error Reporting"
+msgstr "Hata Raporlamayı Etkinleştir"
+
+msgid "Create Error Log in File"
+msgstr "Dosyada Hata Günlüğü Oluştur"
+
+msgid "Display Errors on the website"
+msgstr "Web sitesinde Hataları Göster"
+
+msgid "Enable Script Debug"
+msgstr "Betik Hata Ayıklamayı Etkinleştir"
+
+msgid "Enable Save Queries"
+msgstr "Sorguları Kaydetmeyi Etkinleştir"
+
+msgid "These settings update your wp-config.php file. A timestamped backup is created automatically before each save; you can restore it below."
+msgstr "Bu ayarlar wp-config.php dosyanızı günceller. Her kaydetmeden önce otomatik olarak zaman damgalı bir yedek oluşturulur; aşağıdan geri yükleyebilirsiniz."
+
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+msgid "Send Test Notification"
+msgstr "Test Bildirimi Gönder"
+
+msgid "Sends a test email to verify your notification setup."
+msgstr "Bildirim ayarınızı doğrulamak için bir test e-postası gönderir."
+
+msgid "wp-config.php Backups & Restore"
+msgstr "wp-config.php Yedekleri ve Geri Yükleme"
+
+msgid "The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state. The latest 10 backups are kept automatically."
+msgstr "En yeni yedekler önce listelenir. Geri yükleme, wp-config.php dosyanızı o kaydedilen duruma döndürür. En yeni 10 yedek otomatik olarak saklanır."
+
+msgid "Backup file"
+msgstr "Yedek dosyası"
+
+msgid "Action"
+msgstr "İşlem"
+
+msgid "Restore"
+msgstr "Geri Yükle"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Debug Log"
+msgstr "Hata Ayıklama Günlüğü"
+
+msgid "Clear Log"
+msgstr "Günlüğü Temizle"
+
+msgid "Download Log"
+msgstr "Günlüğü İndir"
+
+msgid "Auto-refresh every 5s"
+msgstr "Her 5 saniyede bir otomatik yenile"
+
+msgid "No Log File Found"
+msgstr "Günlük Dosyası Bulunamadı"
+
+msgid "Debug your WordPress site, multisite and plugins. Debug is a development/production tool that helps you remove bugs from your WordPress website."
+msgstr "WordPress sitenizi, multisite ve eklentilerinizi hata ayıklayın. Debug, WordPress web sitenizdeki hataları gidermenize yardımcı olan bir geliştirme/üretim aracıdır."
+

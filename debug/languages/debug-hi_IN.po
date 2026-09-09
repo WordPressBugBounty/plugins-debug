@@ -1,0 +1,233 @@
+# Copyright (C) 2026 SoniNow Team
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Debug 1.14\n"
+"Report-Msgid-Bugs-To: https://soninow.com/contact\n"
+"POT-Creation-Date: 2026-09-09 00:00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00:00+0000\n"
+"Last-Translator: SoniNow Team <support@soninow.com>\n"
+"Language-Team: हिन्दी <hi_IN@li.org>\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: OpenClaw\n"
+"X-Domain: debug\n"
+
+msgid "Invalid backup file."
+msgstr "अमान्य बैकअप फ़ाइल।"
+
+msgid "Backup file not found."
+msgstr "बैकअप फ़ाइल नहीं मिली।"
+
+msgid "Could not delete backup file. Check file permissions."
+msgstr "बैकअप फ़ाइल हटाई नहीं जा सकी। फ़ाइल अनुमतियाँ जाँचें।"
+
+msgid "Backup file is not a valid wp-config.php."
+msgstr "बैकअप फ़ाइल मान्य wp-config.php नहीं है।"
+
+msgid "Could not restore wp-config.php. Check file permissions."
+msgstr "wp-config.php पुनर्स्थापित नहीं किया जा सका। फ़ाइल अनुमतियाँ जाँचें।"
+
+msgid "File debug.log not removed."
+msgstr "debug.log फ़ाइल नहीं हटाई गई।"
+
+msgid "debug.log file removed successfully."
+msgstr "debug.log फ़ाइल सफलतापूर्वक हटा दी गई।"
+
+msgid "Security check failed. Please try again."
+msgstr "सुरक्षा जाँच विफल रही। कृपया पुनः प्रयास करें।"
+
+msgid "You do not have permission to change debug settings."
+msgstr "आपके पास डीबग सेटिंग्स बदलने की अनुमति नहीं है।"
+
+msgid "Please enter a valid email address."
+msgstr "कृपया एक मान्य ईमेल पता दर्ज करें।"
+
+msgid "Settings saved successfully."
+msgstr "सेटिंग्स सफलतापूर्वक सहेजी गईं।"
+
+msgid "A backup of wp-config.php was created: %s"
+msgstr "wp-config.php की बैकअप प्रतिलिपि बनाई गई: %s"
+
+msgid "wp-config.php was not found."
+msgstr "wp-config.php नहीं मिला।"
+
+msgid "Could not read wp-config.php."
+msgstr "wp-config.php पढ़ा नहीं जा सका।"
+
+msgid "wp-config.php is not writable. Copy the code below into your wp-config.php file:"
+msgstr "wp-config.php लिखने योग्य नहीं है। नीचे दिए गए कोड को अपनी wp-config.php फ़ाइल में कॉपी करें:"
+
+msgid "Could not write wp-config.php."
+msgstr "wp-config.php लिखा नहीं जा सका।"
+
+msgid "Error on %s (via Debug)"
+msgstr "%s पर त्रुटि (डीबग के माध्यम से)"
+
+msgid "Error Reporting"
+msgstr "त्रुटि रिपोर्टिंग"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Level:"
+msgstr "स्तर:"
+
+msgid "Message:"
+msgstr "संदेश:"
+
+msgid "File:"
+msgstr "फ़ाइल:"
+
+msgid "Context:"
+msgstr "संदर्भ:"
+
+msgid "Please enter a valid notification email address first."
+msgstr "कृपया पहले एक मान्य सूचना ईमेल पता दर्ज करें।"
+
+msgid "Please enable Email Notification before sending a test."
+msgstr "परीक्षण भेजने से पहले ईमेल सूचना सक्षम करें।"
+
+msgid "Test notification from Debug on %s"
+msgstr "%s पर डीबग से परीक्षण सूचना"
+
+msgid "This is a test notification."
+msgstr "यह एक परीक्षण सूचना है।"
+
+msgid "Time:"
+msgstr "समय:"
+
+msgid "Status:"
+msgstr "स्थिति:"
+
+msgid "Debug plugin email notifications are working."
+msgstr "डीबग प्लगइन की ईमेल सूचनाएँ कार्य कर रही हैं।"
+
+msgid "Could not send the test notification. Check your mail setup."
+msgstr "परीक्षण सूचना नहीं भेजी जा सकी। अपनी मेल सेटिंग जाँचें।"
+
+msgid "You do not have permission to send a test notification."
+msgstr "आपके पास परीक्षण सूचना भेजने की अनुमति नहीं है।"
+
+msgid "Test notification sent successfully."
+msgstr "परीक्षण सूचना सफलतापूर्वक भेजी गई।"
+
+msgid "Invalid file for download."
+msgstr "डाउनलोड के लिए अमान्य फ़ाइल।"
+
+msgid "File not found or unreadable."
+msgstr "फ़ाइल नहीं मिली या पठनीय नहीं है।"
+
+msgid "You do not have permission to download files."
+msgstr "आपके पास फ़ाइलें डाउनलोड करने की अनुमति नहीं है।"
+
+msgid "Security check failed."
+msgstr "सुरक्षा जाँच विफल रही।"
+
+msgid "You do not have permission to manage wp-config backups."
+msgstr "आपके पास wp-config बैकअप प्रबंधित करने की अनुमति नहीं है।"
+
+msgid "Security check failed for restore."
+msgstr "पुनर्स्थापना के लिए सुरक्षा जाँच विफल रही।"
+
+msgid "Backup deleted successfully."
+msgstr "बैकअप सफलतापूर्वक हटा दिया गया।"
+
+msgid "wp-config.php restored from backup."
+msgstr "wp-config.php बैकअप से पुनर्स्थापित किया गया।"
+
+msgid "Old backup pruned (kept the latest %d)."
+msgid_plural "%d old backups pruned (kept the latest set)."
+msgstr[0] "पुरानी बैकअप हटाई गई (नवीनतम %d रखी गई)।"
+msgstr[1] "%d पुरानी बैकअप हटाई गईं (नवीनतम सेट रखा गया)।"
+
+msgid "Debug"
+msgstr "डीबग"
+
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+msgid "Error Log"
+msgstr "त्रुटि लॉग"
+
+msgid "You do not have permission to access this page."
+msgstr "आपके पास इस पृष्ठ तक पहुँचने की अनुमति नहीं है।"
+
+msgid "Debug Settings"
+msgstr "डीबग सेटिंग्स"
+
+msgid "Debug settings"
+msgstr "डीबग सेटिंग्स"
+
+msgid "Enable Email Notification"
+msgstr "ईमेल सूचना सक्षम करें"
+
+msgid "Email Address"
+msgstr "ईमेल पता"
+
+msgid "Enable Error Reporting"
+msgstr "त्रुटि रिपोर्टिंग सक्षम करें"
+
+msgid "Create Error Log in File"
+msgstr "फ़ाइल में त्रुटि लॉग बनाएँ"
+
+msgid "Display Errors on the website"
+msgstr "वेबसाइट पर त्रुटियाँ प्रदर्शित करें"
+
+msgid "Enable Script Debug"
+msgstr "स्क्रिप्ट डीबग सक्षम करें"
+
+msgid "Enable Save Queries"
+msgstr "क्वेरी सहेजना सक्षम करें"
+
+msgid "These settings update your wp-config.php file. A timestamped backup is created automatically before each save; you can restore it below."
+msgstr "ये सेटिंग्स आपकी wp-config.php फ़ाइल को अपडेट करती हैं। प्रत्येक सहेजने से पहले स्वचालित रूप से टाइमस्टैम्प वाली बैकअप प्रतिलिपि बनाई जाती है; आप इसे नीचे पुनर्स्थापित कर सकते हैं।"
+
+msgid "Save Changes"
+msgstr "परिवर्तन सहेजें"
+
+msgid "Send Test Notification"
+msgstr "परीक्षण सूचना भेजें"
+
+msgid "Sends a test email to verify your notification setup."
+msgstr "आपकी सूचना सेटिंग सत्यापित करने के लिए एक परीक्षण ईमेल भेजता है।"
+
+msgid "wp-config.php Backups & Restore"
+msgstr "wp-config.php बैकअप और पुनर्स्थापना"
+
+msgid "The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state. The latest 10 backups are kept automatically."
+msgstr "सबसे हाल की बैकअप प्रतिलिपियाँ पहले सूचीबद्ध हैं। पुनर्स्थापना आपकी wp-config.php को उस सहेजी गई स्थिति में लौटा देती है। नवीनतम 10 बैकअप स्वचालित रूप से रखे जाते हैं।"
+
+msgid "Backup file"
+msgstr "बैकअप फ़ाइल"
+
+msgid "Action"
+msgstr "कार्रवाई"
+
+msgid "Restore"
+msgstr "पुनर्स्थापित करें"
+
+msgid "Delete"
+msgstr "हटाएँ"
+
+msgid "Debug Log"
+msgstr "डीबग लॉग"
+
+msgid "Clear Log"
+msgstr "लॉग साफ़ करें"
+
+msgid "Download Log"
+msgstr "लॉग डाउनलोड करें"
+
+msgid "Auto-refresh every 5s"
+msgstr "हर 5 सेकंड में स्वतः ताज़ा करें"
+
+msgid "No Log File Found"
+msgstr "कोई लॉग फ़ाइल नहीं मिली"
+
+msgid "Debug your WordPress site, multisite and plugins. Debug is a development/production tool that helps you remove bugs from your WordPress website."
+msgstr "अपनी WordPress साइट, मल्टीसाइट और प्लगइन्स को डीबग करें। Debug एक विकास/उत्पादन उपकरण है जो आपकी WordPress वेबसाइट से बग हटाने में मदद करता है।"
+

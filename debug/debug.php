@@ -2,12 +2,13 @@
 /**
  * Plugin Name: Debug
  * Description: Debug your WordPress site, multisite and plugins. Debug is a development/production tool that helps you remove bugs from your WordPress website.
- * Version: 1.13
+ * Version: 1.14
  * Author: SoniNow Team
  * Author URI: https://soninow.com
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: debug
+ * Domain Path: /languages
  * Requires at least: 5.0
  * Requires PHP: 7.4
  */
@@ -19,7 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'DEBUG_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DEBUG_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'DEBUG_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
-define( 'DEBUG_PLUGIN_VERSION', '1.13' );
+define( 'DEBUG_PLUGIN_VERSION', '1.14' );
+
+// Load translations (must be early so admin + strings localize).
+add_action( 'plugins_loaded', 'debug_load_textdomain' );
+function debug_load_textdomain() {
+	load_plugin_textdomain( 'debug', false, dirname( DEBUG_PLUGIN_BASENAME ) . '/languages' );
+}
 
 // Function library files.
 require_once DEBUG_PLUGIN_DIR . 'functions/function.php';

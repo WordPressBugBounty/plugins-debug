@@ -1,0 +1,233 @@
+# Copyright (C) 2026 SoniNow Team
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Debug 1.14\n"
+"Report-Msgid-Bugs-To: https://soninow.com/contact\n"
+"POT-Creation-Date: 2026-09-09 00:00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00:00+0000\n"
+"Last-Translator: SoniNow Team <support@soninow.com>\n"
+"Language-Team: Русский <ru_RU@li.org>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: OpenClaw\n"
+"X-Domain: debug\n"
+
+msgid "Invalid backup file."
+msgstr "Недопустимый файл резервной копии."
+
+msgid "Backup file not found."
+msgstr "Файл резервной копии не найден."
+
+msgid "Could not delete backup file. Check file permissions."
+msgstr "Не удалось удалить файл резервной копии. Проверьте права доступа к файлу."
+
+msgid "Backup file is not a valid wp-config.php."
+msgstr "Файл резервной копии не является допустимым wp-config.php."
+
+msgid "Could not restore wp-config.php. Check file permissions."
+msgstr "Не удалось восстановить wp-config.php. Проверьте права доступа к файлу."
+
+msgid "File debug.log not removed."
+msgstr "Файл debug.log не удалён."
+
+msgid "debug.log file removed successfully."
+msgstr "Файл debug.log успешно удалён."
+
+msgid "Security check failed. Please try again."
+msgstr "Проверка безопасности не удалась. Попробуйте ещё раз."
+
+msgid "You do not have permission to change debug settings."
+msgstr "У вас нет разрешения изменять настройки отладки."
+
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста, введите действительный адрес электронной почты."
+
+msgid "Settings saved successfully."
+msgstr "Настройки успешно сохранены."
+
+msgid "A backup of wp-config.php was created: %s"
+msgstr "Создана резервная копия wp-config.php: %s"
+
+msgid "wp-config.php was not found."
+msgstr "wp-config.php не найден."
+
+msgid "Could not read wp-config.php."
+msgstr "Не удалось прочитать wp-config.php."
+
+msgid "wp-config.php is not writable. Copy the code below into your wp-config.php file:"
+msgstr "wp-config.php недоступен для записи. Скопируйте приведённый ниже код в свой файл wp-config.php:"
+
+msgid "Could not write wp-config.php."
+msgstr "Не удалось записать wp-config.php."
+
+msgid "Error on %s (via Debug)"
+msgstr "Ошибка на %s (через Отладка)"
+
+msgid "Error Reporting"
+msgstr "Отчёт об ошибках"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Level:"
+msgstr "Уровень:"
+
+msgid "Message:"
+msgstr "Сообщение:"
+
+msgid "File:"
+msgstr "Файл:"
+
+msgid "Context:"
+msgstr "Контекст:"
+
+msgid "Please enter a valid notification email address first."
+msgstr "Сначала введите действительный адрес электронной почты для уведомлений."
+
+msgid "Please enable Email Notification before sending a test."
+msgstr "Включите уведомление по электронной почте перед отправкой теста."
+
+msgid "Test notification from Debug on %s"
+msgstr "Тестовое уведомление от Отладка на %s"
+
+msgid "This is a test notification."
+msgstr "Это тестовое уведомление."
+
+msgid "Time:"
+msgstr "Время:"
+
+msgid "Status:"
+msgstr "Статус:"
+
+msgid "Debug plugin email notifications are working."
+msgstr "Уведомления по электронной почте плагина Отладка работают."
+
+msgid "Could not send the test notification. Check your mail setup."
+msgstr "Не удалось отправить тестовое уведомление. Проверьте настройки почты."
+
+msgid "You do not have permission to send a test notification."
+msgstr "У вас нет разрешения отправлять тестовое уведомление."
+
+msgid "Test notification sent successfully."
+msgstr "Тестовое уведомление успешно отправлено."
+
+msgid "Invalid file for download."
+msgstr "Недопустимый файл для скачивания."
+
+msgid "File not found or unreadable."
+msgstr "Файл не найден или нечитаем."
+
+msgid "You do not have permission to download files."
+msgstr "У вас нет разрешения скачивать файлы."
+
+msgid "Security check failed."
+msgstr "Проверка безопасности не удалась."
+
+msgid "You do not have permission to manage wp-config backups."
+msgstr "У вас нет разрешения управлять резервными копиями wp-config."
+
+msgid "Security check failed for restore."
+msgstr "Проверка безопасности для восстановления не удалась."
+
+msgid "Backup deleted successfully."
+msgstr "Резервная копия успешно удалена."
+
+msgid "wp-config.php restored from backup."
+msgstr "wp-config.php восстановлен из резервной копии."
+
+msgid "Old backup pruned (kept the latest %d)."
+msgid_plural "%d old backups pruned (kept the latest set)."
+msgstr[0] "Старая резервная копия удалена (сохранена самая свежая %d)."
+msgstr[1] "Удалено %d старых резервных копий (сохранён самый свежий набор)."
+
+msgid "Debug"
+msgstr "Отладка"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Error Log"
+msgstr "Журнал ошибок"
+
+msgid "You do not have permission to access this page."
+msgstr "У вас нет разрешения на доступ к этой странице."
+
+msgid "Debug Settings"
+msgstr "Настройки отладки"
+
+msgid "Debug settings"
+msgstr "Настройки отладки"
+
+msgid "Enable Email Notification"
+msgstr "Включить уведомления по электронной почте"
+
+msgid "Email Address"
+msgstr "Адрес электронной почты"
+
+msgid "Enable Error Reporting"
+msgstr "Включить отчёт об ошибках"
+
+msgid "Create Error Log in File"
+msgstr "Создать журнал ошибок в файле"
+
+msgid "Display Errors on the website"
+msgstr "Показывать ошибки на сайте"
+
+msgid "Enable Script Debug"
+msgstr "Включить отладку скриптов"
+
+msgid "Enable Save Queries"
+msgstr "Включить сохранение запросов"
+
+msgid "These settings update your wp-config.php file. A timestamped backup is created automatically before each save; you can restore it below."
+msgstr "Эти настройки обновляют ваш файл wp-config.php. Перед каждым сохранением автоматически создаётся резервная копия с меткой времени; вы можете восстановить её ниже."
+
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+msgid "Send Test Notification"
+msgstr "Отправить тестовое уведомление"
+
+msgid "Sends a test email to verify your notification setup."
+msgstr "Отправляет тестовое письмо для проверки вашей настройки уведомлений."
+
+msgid "wp-config.php Backups & Restore"
+msgstr "Резервные копии и восстановление wp-config.php"
+
+msgid "The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state. The latest 10 backups are kept automatically."
+msgstr "Самые свежие резервные копии отображаются первыми. Восстановление возвращает ваш wp-config.php в это сохранённое состояние. Последние 10 резервных копий сохраняются автоматически."
+
+msgid "Backup file"
+msgstr "Файл резервной копии"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Restore"
+msgstr "Восстановить"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Debug Log"
+msgstr "Журнал отладки"
+
+msgid "Clear Log"
+msgstr "Очистить журнал"
+
+msgid "Download Log"
+msgstr "Скачать журнал"
+
+msgid "Auto-refresh every 5s"
+msgstr "Автообновление каждые 5 с"
+
+msgid "No Log File Found"
+msgstr "Файл журнала не найден"
+
+msgid "Debug your WordPress site, multisite and plugins. Debug is a development/production tool that helps you remove bugs from your WordPress website."
+msgstr "Отлаживайте свой WordPress-сайт, мультисайт и плагины. Debug — это инструмент для разработки и эксплуатации, который помогает устранять ошибки на вашем сайте WordPress."
+

@@ -10,8 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <?php
-// Process restore before any output so notices render above the list.
+// Process restore/delete/test actions before any output so notices render above the list.
 debug_handle_restore();
+debug_handle_test_notification();
 ?>
 <div class="wrap">
 	<h1><?php esc_html_e( 'Debug Settings', 'debug' ); ?></h1>
@@ -98,31 +99,48 @@ debug_handle_restore();
 		</p>
 	</form>
 
+	<?php if ( '1' === ( isset( $debug_settings['enable'] ) ? $debug_settings['enable'] : '0' ) ) : ?>
+		<form method="post" action="" style="margin-top:-8px;">
+			<?php wp_nonce_field( 'debug_save_settings' ); ?>
+			<p>
+				<button type="submit" name="debug_test_notification" value="1" class="button debug-test-btn">
+					<?php esc_html_e( 'Send Test Notification', 'debug' ); ?>
+				</button>
+				<span class="description"><?php esc_html_e( 'Sends a test email to verify your notification setup.', 'debug' ); ?></span>
+			</p>
+		</form>
+	<?php endif; ?>
+
 	<?php if ( ! empty( $backups ) ) : ?>
 		<hr>
 		<h2><?php esc_html_e( 'wp-config.php Backups & Restore', 'debug' ); ?></h2>
 		<p class="description">
-			<?php esc_html_e( 'The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state.', 'debug' ); ?>
+			<?php esc_html_e( 'The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state. The latest 10 backups are kept automatically.', 'debug' ); ?>
 		</p>
 		<form method="post" action="">
 			<?php wp_nonce_field( 'debug_restore_config' ); ?>
-			<table class="widefat striped" style="max-width:640px;">
+			<table class="widefat striped debug-backup-table" style="max-width:760px;">
 				<thead>
 					<tr>
 						<th><?php esc_html_e( 'Backup file', 'debug' ); ?></th>
-						<th><?php esc_html_e( 'Restore', 'debug' ); ?></th>
+						<th style="width:220px;"><?php esc_html_e( 'Action', 'debug' ); ?></th>
 					</tr>
 				</thead>
 				<tbody>
-					<?php
-					$sorted = array_reverse( $backups );
-					foreach ( $sorted as $backup ) :
-						?>
+					<?php foreach ( $backups as $backup ) : ?>
 						<tr>
-							<td><code><?php echo esc_html( $backup ); ?></code></td>
 							<td>
+								<span class="dashicons dashicons-backup debug-backup-icon"></span>
+								<code class="debug-backup-filename"><?php echo esc_html( $backup ); ?></code>
+							</td>
+							<td class="debug-backup-actions">
 								<button type="submit" name="debug_restore_backup" value="<?php echo esc_attr( $backup ); ?>" class="button debug-restore-btn">
+									<span class="dashicons dashicons-image-rotate"></span>
 									<?php esc_html_e( 'Restore', 'debug' ); ?>
+								</button>
+								<button type="submit" name="debug_delete_backup" value="<?php echo esc_attr( $backup ); ?>" class="button debug-delete-btn">
+									<span class="dashicons dashicons-trash"></span>
+									<?php esc_html_e( 'Delete', 'debug' ); ?>
 								</button>
 							</td>
 						</tr>

@@ -170,7 +170,7 @@ function debug_backup_wp_config() {
 /**
  * List available wp-config backups for one-click restore.
  *
- * @return array List of backup file names.
+ * @return array List of backup file names (newest first).
  */
 function debug_list_wp_config_backups() {
 	$home    = trailingslashit( get_home_path() );
@@ -178,7 +178,57 @@ function debug_list_wp_config_backups() {
 	if ( false === $backups ) {
 		return array();
 	}
-	return array_map( 'basename', $backups );
+	$names = array_map( 'basename', $backups );
+	// Newest first (timestamps embedded in the filename as Ymd-His).
+	usort( $names, 'strcmp' );
+	return array_reverse( $names );
+}
+
+/**
+ * Delete one wp-config backup file (admin-only, nonce-gated).
+ *
+ * @param string $backup_name Backup file name (basename only).
+ * @return true|string True on success, or an error message.
+ */
+function debug_delete_wp_config_backup( $backup_name ) {
+	$backup_name = basename( (string) $backup_name );
+	if ( '' === $backup_name || 0 !== strpos( $backup_name, 'wp-config.php.' ) || false === strpos( $backup_name, DEBUG_CONFIG_BACKUP_SUFFIX ) ) {
+		return __( 'Invalid backup file.', 'debug' );
+	}
+
+	$home   = trailingslashit( get_home_path() );
+	$backup = $home . $backup_name;
+	if ( ! file_exists( $backup ) ) {
+		return __( 'Backup file not found.', 'debug' );
+	}
+	if ( ! unlink( $backup ) ) {
+		return __( 'Could not delete backup file. Check file permissions.', 'debug' );
+	}
+	return true;
+}
+
+/**
+ * Enforce backup retention: delete the oldest backups beyond the cap.
+ *
+ * Run after a successful save so the wp-config backup list never grows
+ * without bound.
+ *
+ * @return int Number of backups pruned.
+ */
+function debug_prune_wp_config_backups() {
+	$max      = 10;
+	$backups  = debug_list_wp_config_backups(); // newest first.
+	$pruned   = 0;
+	$home     = trailingslashit( get_home_path() );
+
+	// Keep the newest $max, remove the rest.
+	foreach ( array_slice( $backups, $max ) as $old ) {
+		$path = $home . $old;
+		if ( file_exists( $path ) && @unlink( $path ) ) {
+			$pruned++;
+		}
+	}
+	return $pruned;
 }
 
 /**
@@ -335,7 +385,12 @@ function debug_save_setting() {
 		debug_admin_notice( 'updated', sprintf( __( 'A backup of wp-config.php was created: %s', 'debug' ), esc_html( basename( $backup ) ) ) );
 	}
 
-	echo '<script>setTimeout(function(){ location.reload(); }, 3000);</script>';
+	// Enforce retention so the site root never fills with old backups.
+	$pruned = debug_prune_wp_config_backups();
+	if ( $pruned > 0 ) {
+		/* translators: %d: number of backups pruned. */
+		debug_admin_notice( 'updated', sprintf( _n( 'Old backup pruned (kept the latest %d).', '%d old backups pruned (kept the latest set).', $pruned, 'debug' ), $pruned ) );
+	}
 }
 
 /**
@@ -401,7 +456,9 @@ function debug_add_option( $option, $define, $fileContent ) {
 	$value       = $option ? 'true' : 'false';
 
 	// Match define('X', true|false); regardless of quote style/case/whitespace.
-	$pattern     = "/define\s*\(\s*['\"]" . $escaped . "['\"]\s*,\s*(?:true|false|'true'|'false'|\"true\"|\"false\"|0|1)\s*\)\s*;/i";
+	// Tolerates newlines between tokens and a trailing // comment before the
+	// closing paren, so multiline/annotated defines are updated, not duplicated.
+	$pattern     = "/define\s*\(\s*['\"]" . $escaped . "['\"]\s*,\s*(?:true|false|'true'|'false'|\"true\"|\"false\"|0|1)\s*(?:\/\/[^\r\n]*)?\)\s*;/i";
 	$replacement = "define('" . $define . "', " . $value . ');';
 
 	$new = preg_replace( $pattern, $replacement, $fileContent, 1, $count );
@@ -519,6 +576,66 @@ function debug_flush_notifications() {
 }
 
 /**
+ * Send a one-off test notification to verify email setup works.
+ *
+ * @return true|string True on success, or an error message.
+ */
+function debug_send_test_notification() {
+	$settings = debug_get_options();
+	if ( empty( $settings['email'] ) || ! is_email( $settings['email'] ) ) {
+		return __( 'Please enter a valid notification email address first.', 'debug' );
+	}
+	if ( '1' !== $settings['enable'] ) {
+		return __( 'Please enable Email Notification before sending a test.', 'debug' );
+	}
+
+	$home_url = home_url( '/' );
+	$subject  = sprintf(
+		/* translators: 1: site name. */
+		__( 'Test notification from Debug on %s', 'debug' ),
+		wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES )
+	);
+
+	$message  = '<h2>' . esc_html__( 'This is a test notification.', 'debug' ) . '</h2>';
+	$message .= '<p><strong>' . esc_html__( 'URL:', 'debug' ) . '</strong> ' . esc_url( $home_url ) . '</p>';
+	$message .= '<p><strong>' . esc_html__( 'Time:', 'debug' ) . '</strong> ' . esc_html( current_time( 'mysql' ) ) . '</p>';
+	$message .= '<p><strong>' . esc_html__( 'Status:', 'debug' ) . '</strong> ' . esc_html__( 'Debug plugin email notifications are working.', 'debug' ) . '</p>';
+
+	$headers = array( 'Content-Type: text/html; charset=UTF-8' );
+
+	if ( ! wp_mail( $settings['email'], $subject, wp_kses_post( $message ), $headers ) ) {
+		return __( 'Could not send the test notification. Check your mail setup.', 'debug' );
+	}
+	return true;
+}
+
+/**
+ * Handle the test-notification POST from the settings page.
+ */
+function debug_handle_test_notification() {
+	if ( empty( $_POST['debug_test_notification'] ) ) {
+		return; // Not a test-notification submit.
+	}
+
+	if ( ! current_user_can( 'manage_options' ) ) {
+		debug_admin_notice( 'error', __( 'You do not have permission to send a test notification.', 'debug' ) );
+		return;
+	}
+
+	if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ), 'debug_save_settings' ) ) {
+		debug_admin_notice( 'error', __( 'Security check failed. Please try again.', 'debug' ) );
+		return;
+	}
+
+	$result = debug_send_test_notification();
+	if ( true === $result ) {
+		debug_admin_notice( 'updated', __( 'Test notification sent successfully.', 'debug' ) );
+	} else {
+		debug_admin_notice( 'error', $result );
+	}
+}
+
+/**
  * Throttled, level-filtered error handler.
  *
  * Only fires when email notifications are enabled, filters out noise levels, and
@@ -631,15 +748,25 @@ function debug_handle_file_download() {
 }
 
 /**
- * Handle wp-config restore requests securely.
+ * Handle wp-config restore AND delete-backup requests securely.
+ *
+ * Both actions are same-page POSTs gated on their own submit field, a
+ * capability check, and a nonce, so one form cannot trigger the other.
  */
 function debug_handle_restore() {
-	if ( empty( $_POST['debug_restore_backup'] ) ) {
-		return; // Not a restore-submit.
+	$is_restore = ! empty( $_POST['debug_restore_backup'] );
+	$is_delete  = ! empty( $_POST['debug_delete_backup'] );
+	if ( ! $is_restore && ! $is_delete ) {
+		return; // Not a backup action submit.
+	}
+
+	// A form can only submit one submit button at a time.
+	if ( $is_restore && ! empty( $_POST['debug_delete_backup'] ) ) {
+		$is_restore = false;
 	}
 
 	if ( ! current_user_can( 'manage_options' ) ) {
-		debug_admin_notice( 'error', __( 'You do not have permission to restore wp-config.php.', 'debug' ) );
+		debug_admin_notice( 'error', __( 'You do not have permission to manage wp-config backups.', 'debug' ) );
 		return;
 	}
 
@@ -648,12 +775,24 @@ function debug_handle_restore() {
 		return;
 	}
 
-	$backup = sanitize_file_name( wp_unslash( $_POST['debug_restore_backup'] ) );
-	$result = debug_restore_wp_config( $backup );
+	if ( $is_delete ) {
+		$backup = wp_unslash( $_POST['debug_delete_backup'] );
+		$result = debug_delete_wp_config_backup( $backup );
+		if ( true === $result ) {
+			debug_admin_notice( 'updated', __( 'Backup deleted successfully.', 'debug' ) );
+		} else {
+			debug_admin_notice( 'error', $result );
+		}
+		return;
+	}
 
-	if ( true === $result ) {
-		debug_admin_notice( 'updated', __( 'wp-config.php restored from backup.', 'debug' ) );
-	} else {
-		debug_admin_notice( 'error', $result );
+	if ( $is_restore ) {
+		$backup = wp_unslash( $_POST['debug_restore_backup'] );
+		$result = debug_restore_wp_config( $backup );
+		if ( true === $result ) {
+			debug_admin_notice( 'updated', __( 'wp-config.php restored from backup.', 'debug' ) );
+		} else {
+			debug_admin_notice( 'error', $result );
+		}
 	}
 }

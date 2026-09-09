@@ -77,14 +77,18 @@ add_filter( 'plugin_action_links_' . DEBUG_PLUGIN_BASENAME, 'debug_settings_link
 
 /**
  * Register the error handler only when email notifications are enabled.
+ *
+ * Hooked on plugins_loaded for the earliest possible coverage (catches errors
+ * during theme/plugin loading that 'init' would miss), and re-registered on
+ * init as a belt-and-braces measure.
  */
-function debug_send_notification_email() {
+function debug_register_error_handler() {
 	$debug_setting = debug_get_options();
 	if ( isset( $debug_setting['enable'] ) && '1' === $debug_setting['enable'] ) {
 		set_error_handler( 'debug_error_handler' );
 	}
 }
-add_action( 'init', 'debug_send_notification_email' );
+add_action( 'plugins_loaded', 'debug_register_error_handler', 1 );
 
 /**
  * Flush queued error notifications on shutdown (non-blocking).

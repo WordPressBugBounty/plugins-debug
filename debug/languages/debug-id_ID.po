@@ -1,0 +1,233 @@
+# Copyright (C) 2026 SoniNow Team
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Debug 1.14\n"
+"Report-Msgid-Bugs-To: https://soninow.com/contact\n"
+"POT-Creation-Date: 2026-09-09 00:00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00:00+0000\n"
+"Last-Translator: SoniNow Team <support@soninow.com>\n"
+"Language-Team: Bahasa Indonesia <id_ID@li.org>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: OpenClaw\n"
+"X-Domain: debug\n"
+
+msgid "Invalid backup file."
+msgstr "File cadangan tidak valid."
+
+msgid "Backup file not found."
+msgstr "File cadangan tidak ditemukan."
+
+msgid "Could not delete backup file. Check file permissions."
+msgstr "Tidak dapat menghapus file cadangan. Periksa izin file."
+
+msgid "Backup file is not a valid wp-config.php."
+msgstr "File cadangan bukan wp-config.php yang valid."
+
+msgid "Could not restore wp-config.php. Check file permissions."
+msgstr "Tidak dapat memulihkan wp-config.php. Periksa izin file."
+
+msgid "File debug.log not removed."
+msgstr "File debug.log tidak dihapus."
+
+msgid "debug.log file removed successfully."
+msgstr "File debug.log berhasil dihapus."
+
+msgid "Security check failed. Please try again."
+msgstr "Pemeriksaan keamanan gagal. Silakan coba lagi."
+
+msgid "You do not have permission to change debug settings."
+msgstr "Anda tidak memiliki izin untuk mengubah pengaturan debug."
+
+msgid "Please enter a valid email address."
+msgstr "Masukkan alamat email yang valid."
+
+msgid "Settings saved successfully."
+msgstr "Pengaturan berhasil disimpan."
+
+msgid "A backup of wp-config.php was created: %s"
+msgstr "Cadangan wp-config.php telah dibuat: %s"
+
+msgid "wp-config.php was not found."
+msgstr "wp-config.php tidak ditemukan."
+
+msgid "Could not read wp-config.php."
+msgstr "Tidak dapat membaca wp-config.php."
+
+msgid "wp-config.php is not writable. Copy the code below into your wp-config.php file:"
+msgstr "wp-config.php tidak dapat ditulis. Salin kode di bawah ini ke file wp-config.php Anda:"
+
+msgid "Could not write wp-config.php."
+msgstr "Tidak dapat menulis wp-config.php."
+
+msgid "Error on %s (via Debug)"
+msgstr "Kesalahan pada %s (melalui Debug)"
+
+msgid "Error Reporting"
+msgstr "Pelaporan Kesalahan"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Level:"
+msgstr "Tingkat:"
+
+msgid "Message:"
+msgstr "Pesan:"
+
+msgid "File:"
+msgstr "File:"
+
+msgid "Context:"
+msgstr "Konteks:"
+
+msgid "Please enter a valid notification email address first."
+msgstr "Masukkan alamat email notifikasi yang valid terlebih dahulu."
+
+msgid "Please enable Email Notification before sending a test."
+msgstr "Aktifkan Notifikasi Email sebelum mengirim tes."
+
+msgid "Test notification from Debug on %s"
+msgstr "Notifikasi tes dari Debug pada %s"
+
+msgid "This is a test notification."
+msgstr "Ini adalah notifikasi tes."
+
+msgid "Time:"
+msgstr "Waktu:"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Debug plugin email notifications are working."
+msgstr "Notifikasi email plugin Debug berfungsi."
+
+msgid "Could not send the test notification. Check your mail setup."
+msgstr "Tidak dapat mengirim notifikasi tes. Periksa pengaturan email Anda."
+
+msgid "You do not have permission to send a test notification."
+msgstr "Anda tidak memiliki izin untuk mengirim notifikasi tes."
+
+msgid "Test notification sent successfully."
+msgstr "Notifikasi tes berhasil dikirim."
+
+msgid "Invalid file for download."
+msgstr "File tidak valid untuk diunduh."
+
+msgid "File not found or unreadable."
+msgstr "File tidak ditemukan atau tidak dapat dibaca."
+
+msgid "You do not have permission to download files."
+msgstr "Anda tidak memiliki izin untuk mengunduh file."
+
+msgid "Security check failed."
+msgstr "Pemeriksaan keamanan gagal."
+
+msgid "You do not have permission to manage wp-config backups."
+msgstr "Anda tidak memiliki izin untuk mengelola cadangan wp-config."
+
+msgid "Security check failed for restore."
+msgstr "Pemeriksaan keamanan untuk pemulihan gagal."
+
+msgid "Backup deleted successfully."
+msgstr "Cadangan berhasil dihapus."
+
+msgid "wp-config.php restored from backup."
+msgstr "wp-config.php dipulihkan dari cadangan."
+
+msgid "Old backup pruned (kept the latest %d)."
+msgid_plural "%d old backups pruned (kept the latest set)."
+msgstr[0] "Cadangan lama dipangkas (menyimpan yang terbaru %d)."
+msgstr[1] "%d cadangan lama dipangkas (menyimpan set terbaru)."
+
+msgid "Debug"
+msgstr "Debug"
+
+msgid "Settings"
+msgstr "Pengaturan"
+
+msgid "Error Log"
+msgstr "Log Kesalahan"
+
+msgid "You do not have permission to access this page."
+msgstr "Anda tidak memiliki izin untuk mengakses halaman ini."
+
+msgid "Debug Settings"
+msgstr "Pengaturan Debug"
+
+msgid "Debug settings"
+msgstr "Pengaturan debug"
+
+msgid "Enable Email Notification"
+msgstr "Aktifkan Notifikasi Email"
+
+msgid "Email Address"
+msgstr "Alamat Email"
+
+msgid "Enable Error Reporting"
+msgstr "Aktifkan Pelaporan Kesalahan"
+
+msgid "Create Error Log in File"
+msgstr "Buat Log Kesalahan di File"
+
+msgid "Display Errors on the website"
+msgstr "Tampilkan Kesalahan di Situs Web"
+
+msgid "Enable Script Debug"
+msgstr "Aktifkan Debug Script"
+
+msgid "Enable Save Queries"
+msgstr "Aktifkan Simpan Kueri"
+
+msgid "These settings update your wp-config.php file. A timestamped backup is created automatically before each save; you can restore it below."
+msgstr "Pengaturan ini memperbarui file wp-config.php Anda. Cadangan berstempel waktu dibuat otomatis sebelum setiap penyimpanan; Anda dapat memulihkannya di bawah ini."
+
+msgid "Save Changes"
+msgstr "Simpan Perubahan"
+
+msgid "Send Test Notification"
+msgstr "Kirim Notifikasi Tes"
+
+msgid "Sends a test email to verify your notification setup."
+msgstr "Mengirim email tes untuk memverifikasi pengaturan notifikasi Anda."
+
+msgid "wp-config.php Backups & Restore"
+msgstr "Cadangan & Pemulihan wp-config.php"
+
+msgid "The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state. The latest 10 backups are kept automatically."
+msgstr "Cadangan terbaru dicantumkan paling awal. Pemulihan mengembalikan wp-config.php Anda ke keadaan tersimpan tersebut. 10 cadangan terbaru disimpan secara otomatis."
+
+msgid "Backup file"
+msgstr "File cadangan"
+
+msgid "Action"
+msgstr "Tindakan"
+
+msgid "Restore"
+msgstr "Pulihkan"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Debug Log"
+msgstr "Log Debug"
+
+msgid "Clear Log"
+msgstr "Bersihkan Log"
+
+msgid "Download Log"
+msgstr "Unduh Log"
+
+msgid "Auto-refresh every 5s"
+msgstr "Perbarui otomatis setiap 5 detik"
+
+msgid "No Log File Found"
+msgstr "Tidak Ada File Log Ditemukan"
+
+msgid "Debug your WordPress site, multisite and plugins. Debug is a development/production tool that helps you remove bugs from your WordPress website."
+msgstr "Debug situs WordPress Anda, multisite, dan plugin. Debug adalah alat pengembangan/produksi yang membantu menghapus bug dari situs web WordPress Anda."
+

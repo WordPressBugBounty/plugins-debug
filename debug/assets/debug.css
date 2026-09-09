@@ -28,3 +28,71 @@
 	overflow-y: auto;
 	white-space: pre-wrap;
 }
+
+/* Backup table: 2-column layout with dashicons + styled actions */
+.debug-backup-table {
+	margin-top: 12px;
+}
+
+.debug-backup-table td {
+	vertical-align: middle;
+}
+
+.debug-backup-icon {
+	color: #646970;
+	font-size: 18px;
+	width: 20px;
+	height: 20px;
+	vertical-align: text-bottom;
+	margin-right: 4px;
+}
+
+.debug-backup-filename {
+	font-size: 12px;
+	word-break: break-all;
+}
+
+.debug-backup-actions {
+	white-space: nowrap;
+}
+
+.debug-backup-actions .button {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	margin-right: 6px;
+}
+
+.debug-backup-actions .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px !important;
+	margin-top: 1px;
+}
+
+/* Restore: solid blue primary */
+.debug-restore-btn {
+	color: #fff !important;
+	background: #2271b1 !important;
+	border-color: #2271b1 !important;
+}
+
+.debug-restore-btn:hover {
+	background: #135e96 !important;
+	border-color: #135e96 !important;
+	color: #fff !important;
+}
+
+/* Delete: outlined red danger, fills red on hover */
+.debug-delete-btn {
+	color: #d63638 !important;
+	background: #fff !important;
+	border-color: #d63638 !important;
+}
+
+.debug-delete-btn:hover {
+	background: #d63638 !important;
+	border-color: #d63638 !important;
+	color: #fff !important;
+}

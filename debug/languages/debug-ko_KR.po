@@ -1,0 +1,233 @@
+# Copyright (C) 2026 SoniNow Team
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Debug 1.14\n"
+"Report-Msgid-Bugs-To: https://soninow.com/contact\n"
+"POT-Creation-Date: 2026-09-09 00:00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00:00+0000\n"
+"Last-Translator: SoniNow Team <support@soninow.com>\n"
+"Language-Team: 한국어 <ko_KR@li.org>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: OpenClaw\n"
+"X-Domain: debug\n"
+
+msgid "Invalid backup file."
+msgstr "백업 파일이 잘못되었습니다."
+
+msgid "Backup file not found."
+msgstr "백업 파일을 찾을 수 없습니다."
+
+msgid "Could not delete backup file. Check file permissions."
+msgstr "백업 파일을 삭제할 수 없습니다. 파일 권한을 확인하세요."
+
+msgid "Backup file is not a valid wp-config.php."
+msgstr "백업 파일이 올바른 wp-config.php가 아닙니다."
+
+msgid "Could not restore wp-config.php. Check file permissions."
+msgstr "wp-config.php를 복원할 수 없습니다. 파일 권한을 확인하세요."
+
+msgid "File debug.log not removed."
+msgstr "debug.log 파일이 제거되지 않았습니다."
+
+msgid "debug.log file removed successfully."
+msgstr "debug.log 파일이 성공적으로 제거되었습니다."
+
+msgid "Security check failed. Please try again."
+msgstr "보안 검사에 실패했습니다. 다시 시도하세요."
+
+msgid "You do not have permission to change debug settings."
+msgstr "디버그 설정을 변경할 권한이 없습니다."
+
+msgid "Please enter a valid email address."
+msgstr "유효한 이메일 주소를 입력하세요."
+
+msgid "Settings saved successfully."
+msgstr "설정이 성공적으로 저장되었습니다."
+
+msgid "A backup of wp-config.php was created: %s"
+msgstr "wp-config.php 백업이 생성되었습니다: %s"
+
+msgid "wp-config.php was not found."
+msgstr "wp-config.php를 찾을 수 없습니다."
+
+msgid "Could not read wp-config.php."
+msgstr "wp-config.php를 읽을 수 없습니다."
+
+msgid "wp-config.php is not writable. Copy the code below into your wp-config.php file:"
+msgstr "wp-config.php에 쓸 수 없습니다. 아래 코드를 wp-config.php 파일에 복사하세요:"
+
+msgid "Could not write wp-config.php."
+msgstr "wp-config.php에 쓸 수 없습니다."
+
+msgid "Error on %s (via Debug)"
+msgstr "%s에서 오류 발생 (디버그 통해)"
+
+msgid "Error Reporting"
+msgstr "오류 보고"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Level:"
+msgstr "수준:"
+
+msgid "Message:"
+msgstr "메시지:"
+
+msgid "File:"
+msgstr "파일:"
+
+msgid "Context:"
+msgstr "컨텍스트:"
+
+msgid "Please enter a valid notification email address first."
+msgstr "먼저 유효한 알림 이메일 주소를 입력하세요."
+
+msgid "Please enable Email Notification before sending a test."
+msgstr "테스트를 보내기 전에 이메일 알림을 활성화하세요."
+
+msgid "Test notification from Debug on %s"
+msgstr "%s에서 디버그의 테스트 알림"
+
+msgid "This is a test notification."
+msgstr "이것은 테스트 알림입니다."
+
+msgid "Time:"
+msgstr "시간:"
+
+msgid "Status:"
+msgstr "상태:"
+
+msgid "Debug plugin email notifications are working."
+msgstr "디버그 플러그인의 이메일 알림이 작동 중입니다."
+
+msgid "Could not send the test notification. Check your mail setup."
+msgstr "테스트 알림을 보낼 수 없습니다. 메일 설정을 확인하세요."
+
+msgid "You do not have permission to send a test notification."
+msgstr "테스트 알림을 보낼 권한이 없습니다."
+
+msgid "Test notification sent successfully."
+msgstr "테스트 알림이 성공적으로 전송되었습니다."
+
+msgid "Invalid file for download."
+msgstr "다운로드할 수 없는 파일입니다."
+
+msgid "File not found or unreadable."
+msgstr "파일을 찾을 수 없거나 읽을 수 없습니다."
+
+msgid "You do not have permission to download files."
+msgstr "파일을 다운로드할 권한이 없습니다."
+
+msgid "Security check failed."
+msgstr "보안 검사에 실패했습니다."
+
+msgid "You do not have permission to manage wp-config backups."
+msgstr "wp-config 백업을 관리할 권한이 없습니다."
+
+msgid "Security check failed for restore."
+msgstr "복원에 대한 보안 검사에 실패했습니다."
+
+msgid "Backup deleted successfully."
+msgstr "백업이 성공적으로 삭제되었습니다."
+
+msgid "wp-config.php restored from backup."
+msgstr "wp-config.php가 백업에서 복원되었습니다."
+
+msgid "Old backup pruned (kept the latest %d)."
+msgid_plural "%d old backups pruned (kept the latest set)."
+msgstr[0] "오래된 백업이 정리되었습니다 (최신 %d개 유지)."
+msgstr[1] "오래된 백업 %d개가 정리되었습니다 (최신 세트 유지)."
+
+msgid "Debug"
+msgstr "디버그"
+
+msgid "Settings"
+msgstr "설정"
+
+msgid "Error Log"
+msgstr "오류 로그"
+
+msgid "You do not have permission to access this page."
+msgstr "이 페이지에 접근할 권한이 없습니다."
+
+msgid "Debug Settings"
+msgstr "디버그 설정"
+
+msgid "Debug settings"
+msgstr "디버그 설정"
+
+msgid "Enable Email Notification"
+msgstr "이메일 알림 활성화"
+
+msgid "Email Address"
+msgstr "이메일 주소"
+
+msgid "Enable Error Reporting"
+msgstr "오류 보고 활성화"
+
+msgid "Create Error Log in File"
+msgstr "파일에 오류 로그 만들기"
+
+msgid "Display Errors on the website"
+msgstr "웹사이트에 오류 표시"
+
+msgid "Enable Script Debug"
+msgstr "스크립트 디버그 활성화"
+
+msgid "Enable Save Queries"
+msgstr "쿼리 저장 활성화"
+
+msgid "These settings update your wp-config.php file. A timestamped backup is created automatically before each save; you can restore it below."
+msgstr "이 설정은 wp-config.php 파일을 업데이트합니다. 저장할 때마다 타임스탬프가 있는 백업이 자동으로 생성됩니다. 아래에서 복원할 수 있습니다."
+
+msgid "Save Changes"
+msgstr "변경 사항 저장"
+
+msgid "Send Test Notification"
+msgstr "테스트 알림 보내기"
+
+msgid "Sends a test email to verify your notification setup."
+msgstr "알림 설정을 확인하기 위해 테스트 이메일을 보냅니다."
+
+msgid "wp-config.php Backups & Restore"
+msgstr "wp-config.php 백업 및 복원"
+
+msgid "The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state. The latest 10 backups are kept automatically."
+msgstr "최신 백업이 먼저 표시됩니다. 복원하면 wp-config.php가 저장된 상태로 돌아갑니다. 최신 10개 백업이 자동으로 유지됩니다."
+
+msgid "Backup file"
+msgstr "백업 파일"
+
+msgid "Action"
+msgstr "작업"
+
+msgid "Restore"
+msgstr "복원"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Debug Log"
+msgstr "디버그 로그"
+
+msgid "Clear Log"
+msgstr "로그 지우기"
+
+msgid "Download Log"
+msgstr "로그 다운로드"
+
+msgid "Auto-refresh every 5s"
+msgstr "5초마다 자동 새로고침"
+
+msgid "No Log File Found"
+msgstr "로그 파일을 찾을 수 없습니다"
+
+msgid "Debug your WordPress site, multisite and plugins. Debug is a development/production tool that helps you remove bugs from your WordPress website."
+msgstr "WordPress 사이트, 멀티사이트 및 플러그인을 디버그하세요. Debug는 WordPress 웹사이트에서 버그를 제거하는 데 도움이 되는 개발/운영 도구입니다."
+

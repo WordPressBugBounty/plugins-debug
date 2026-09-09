@@ -1,0 +1,233 @@
+# Copyright (C) 2026 SoniNow Team
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Debug 1.14\n"
+"Report-Msgid-Bugs-To: https://soninow.com/contact\n"
+"POT-Creation-Date: 2026-09-09 00:00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00:00+0000\n"
+"Last-Translator: SoniNow Team <support@soninow.com>\n"
+"Language-Team: 日本語 <ja@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: OpenClaw\n"
+"X-Domain: debug\n"
+
+msgid "Invalid backup file."
+msgstr "無効なバックアップファイルです。"
+
+msgid "Backup file not found."
+msgstr "バックアップファイルが見つかりません。"
+
+msgid "Could not delete backup file. Check file permissions."
+msgstr "バックアップファイルを削除できませんでした。ファイルの権限を確認してください。"
+
+msgid "Backup file is not a valid wp-config.php."
+msgstr "バックアップファイルは有効なwp-config.phpではありません。"
+
+msgid "Could not restore wp-config.php. Check file permissions."
+msgstr "wp-config.phpを復元できませんでした。ファイルの権限を確認してください。"
+
+msgid "File debug.log not removed."
+msgstr "debug.logファイルが削除されませんでした。"
+
+msgid "debug.log file removed successfully."
+msgstr "debug.logファイルが正常に削除されました。"
+
+msgid "Security check failed. Please try again."
+msgstr "セキュリティチェックに失敗しました。もう一度お試しください。"
+
+msgid "You do not have permission to change debug settings."
+msgstr "デバッグ設定を変更する権限がありません。"
+
+msgid "Please enter a valid email address."
+msgstr "有効なメールアドレスを入力してください。"
+
+msgid "Settings saved successfully."
+msgstr "設定が正常に保存されました。"
+
+msgid "A backup of wp-config.php was created: %s"
+msgstr "wp-config.phpのバックアップが作成されました: %s"
+
+msgid "wp-config.php was not found."
+msgstr "wp-config.phpが見つかりません。"
+
+msgid "Could not read wp-config.php."
+msgstr "wp-config.phpを読み取れませんでした。"
+
+msgid "wp-config.php is not writable. Copy the code below into your wp-config.php file:"
+msgstr "wp-config.phpは書き込み可能ではありません。以下のコードをwp-config.phpファイルにコピーしてください:"
+
+msgid "Could not write wp-config.php."
+msgstr "wp-config.phpに書き込めませんでした。"
+
+msgid "Error on %s (via Debug)"
+msgstr "%sでエラー（デバッグ経由）"
+
+msgid "Error Reporting"
+msgstr "エラー報告"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Level:"
+msgstr "レベル:"
+
+msgid "Message:"
+msgstr "メッセージ:"
+
+msgid "File:"
+msgstr "ファイル:"
+
+msgid "Context:"
+msgstr "コンテキスト:"
+
+msgid "Please enter a valid notification email address first."
+msgstr "最初に有効な通知用メールアドレスを入力してください。"
+
+msgid "Please enable Email Notification before sending a test."
+msgstr "テストを送信する前にメール通知を有効にしてください。"
+
+msgid "Test notification from Debug on %s"
+msgstr "%sのデバッグからのテスト通知"
+
+msgid "This is a test notification."
+msgstr "これはテスト通知です。"
+
+msgid "Time:"
+msgstr "時刻:"
+
+msgid "Status:"
+msgstr "ステータス:"
+
+msgid "Debug plugin email notifications are working."
+msgstr "デバッグプラグインのメール通知は動作しています。"
+
+msgid "Could not send the test notification. Check your mail setup."
+msgstr "テスト通知を送信できませんでした。メール設定を確認してください。"
+
+msgid "You do not have permission to send a test notification."
+msgstr "テスト通知を送信する権限がありません。"
+
+msgid "Test notification sent successfully."
+msgstr "テスト通知が正常に送信されました。"
+
+msgid "Invalid file for download."
+msgstr "ダウンロードできないファイルです。"
+
+msgid "File not found or unreadable."
+msgstr "ファイルが見つからないか、読み取れません。"
+
+msgid "You do not have permission to download files."
+msgstr "ファイルをダウンロードする権限がありません。"
+
+msgid "Security check failed."
+msgstr "セキュリティチェックに失敗しました。"
+
+msgid "You do not have permission to manage wp-config backups."
+msgstr "wp-configバックアップを管理する権限がありません。"
+
+msgid "Security check failed for restore."
+msgstr "復元のセキュリティチェックに失敗しました。"
+
+msgid "Backup deleted successfully."
+msgstr "バックアップが正常に削除されました。"
+
+msgid "wp-config.php restored from backup."
+msgstr "wp-config.phpがバックアップから復元されました。"
+
+msgid "Old backup pruned (kept the latest %d)."
+msgid_plural "%d old backups pruned (kept the latest set)."
+msgstr[0] "古いバックアップが削除されました（最新の%dを保持）。"
+msgstr[1] "%d個の古いバックアップが削除されました（最新のセットを保持）。"
+
+msgid "Debug"
+msgstr "デバッグ"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Error Log"
+msgstr "エラーログ"
+
+msgid "You do not have permission to access this page."
+msgstr "このページにアクセスする権限がありません。"
+
+msgid "Debug Settings"
+msgstr "デバッグ設定"
+
+msgid "Debug settings"
+msgstr "デバッグ設定"
+
+msgid "Enable Email Notification"
+msgstr "メール通知を有効にする"
+
+msgid "Email Address"
+msgstr "メールアドレス"
+
+msgid "Enable Error Reporting"
+msgstr "エラー報告を有効にする"
+
+msgid "Create Error Log in File"
+msgstr "ファイルにエラーログを作成する"
+
+msgid "Display Errors on the website"
+msgstr "ウェブサイトにエラーを表示する"
+
+msgid "Enable Script Debug"
+msgstr "スクリプトデバッグを有効にする"
+
+msgid "Enable Save Queries"
+msgstr "クエリ保存を有効にする"
+
+msgid "These settings update your wp-config.php file. A timestamped backup is created automatically before each save; you can restore it below."
+msgstr "これらの設定はwp-config.phpファイルを更新します。保存のたびにタイムスタンプ付きのバックアップが自動的に作成されます。以下で復元できます。"
+
+msgid "Save Changes"
+msgstr "変更を保存"
+
+msgid "Send Test Notification"
+msgstr "テスト通知を送信"
+
+msgid "Sends a test email to verify your notification setup."
+msgstr "通知設定を確認するためのテストメールを送信します。"
+
+msgid "wp-config.php Backups & Restore"
+msgstr "wp-config.phpのバックアップと復元"
+
+msgid "The most recent backups are listed newest-first. Restoring returns your wp-config.php to that saved state. The latest 10 backups are kept automatically."
+msgstr "最新のバックアップが新しい順に表示されます。復元するとwp-config.phpはその保存済みの状態に戻ります。最新のバックアップ10件は自動的に保持されます。"
+
+msgid "Backup file"
+msgstr "バックアップファイル"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Restore"
+msgstr "復元"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Debug Log"
+msgstr "デバッグログ"
+
+msgid "Clear Log"
+msgstr "ログをクリア"
+
+msgid "Download Log"
+msgstr "ログをダウンロード"
+
+msgid "Auto-refresh every 5s"
+msgstr "5秒ごとに自動更新"
+
+msgid "No Log File Found"
+msgstr "ログファイルが見つかりません"
+
+msgid "Debug your WordPress site, multisite and plugins. Debug is a development/production tool that helps you remove bugs from your WordPress website."
+msgstr "WordPressサイト、マルチサイト、プラグインをデバッグします。Debugは、あなたのWordPressサイトからバグを取り除くのに役立つ開発・本番ツールです。"
+
