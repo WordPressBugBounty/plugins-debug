@@ -2,48 +2,85 @@
 Contributors: soninow
 Donate link: https://soninow.com/
 Tags: debug, error reporting, error log, error notification, display error
-Requires at least: 3.4
-Tested up to: 6.4.3
-Stable tag: 1.12
-Requires PHP: 5.6
+Requires at least: 5.0
+Tested up to: 6.7
+Stable tag: 1.13
+Requires PHP: 7.4
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Debug can help you to find errors in your wordpress website via editing wp-config.php file and email notification.
+Debug helps you find and fix errors in your WordPress site by safely editing your wp-config.php file and sending real-time email notifications.
 
 == Description ==
-Debug can help you to find errors in your wordpress website via editing wp-config.php file. you may enable error reporting by debug plugin. enable email notification on any run time bug in wordpress CMS/website.
+
+Debug is a development/production tool for WordPress. It helps you find bugs in your site by letting you toggle WordPress's built-in debug flags and by emailing you when a runtime error occurs.
+
+**Features**
+
+* Toggle `WP_DEBUG`, `WP_DEBUG_LOG`, `WP_DEBUG_DISPLAY`, `SCRIPT_DEBUG` and `SAVEQUERIES` from the admin settings page.
+* View, clear and download your `wp-content/debug.log` tail (last 1 MB).
+* Real-time error → email notification with a throttled, level-filtered error handler.
+* Automatic timestamped backup of `wp-config.php` before every save, plus one-click restore.
+
+= How it works =
+The Debug plugin modifies your `wp-config.php` file to enable or disable WordPress debug constants, and it reads the tail of your `debug.log`. A backup of `wp-config.php` is created automatically before each change so you can always roll back.
+
+= Note on file permissions =
+To edit `wp-config.php`, your server must allow the plugin to write that file. If it cannot, the plugin shows you the code to paste manually instead.
+
+= Security & email notifications =
+Notifications only fire for meaningful error levels (errors and warnings), never for deprecation notices or suppressed (`@`) code, and emails are queued and throttled so a busy site won't flood your inbox or SMTP queue.
 
 == Installation ==
-This section describes how to install the plugin and get it working.
 
-e.g.
+1. Unzip and upload `debug.zip` to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Go to the **Debug** settings page and configure your preferences.
+4. Hit **Save Changes**.
 
-1. Unzip and Upload `debug.zip` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Make configuration setting in plugin setting page.
-4. hit "save setting" button.
+== Frequently Asked Questions ==
+
+= Is my wp-config.php safe? =
+Yes. The plugin creates a timestamped backup of `wp-config.php` before every change, and the settings page lets you restore any backup with one click. `wp-config.php` is never downloadable from the browser.
+
+= Why am I not getting email notifications? =
+Make sure email notifications are enabled and a valid address is set, and that `wp_mail()` works on your host. Only errors and warnings trigger emails.
+
+= The plugin cannot write wp-config.php =
+Check your file permissions. If the file is not writable the plugin shows the exact code to paste into `wp-config.php` manually.
 
 == Screenshots ==
-1. **Debug Configuration Setting**: Admin can configure their Debug setting.
-2. **Debug Configuration Save Setting**: Save Debug setting with success message. 
-3. **Debug Configuration Save Setting Error**: Admin will see the wp-config file php code, if file write permission not on hosted server.
-4. **Debug Log File**: see debug.log file in plugin area and download it.
-5. **Debug No Log File**: see if no debug.log file exist.
+1. Debug Configuration Settings.
+2. Save Settings with success message.
+3. wp-config.php manual-paste fallback when the file is not writable.
+4. Debug log file viewer with clear / download actions.
+5. No log file notice.
 
 == Changelog ==
+= 1.13 =
+* Security: removed the ability to download `wp-config.php` (full credential leak). Debug log download now only serves the log via a clean `admin-post.php` endpoint.
+* Security: added strict path allowlisting + traversal guards to all file reads/writes.
+* Security: automatic timestamped `wp-config.php` backup before every save + one-click restore UI.
+* Security: error handler now only registers when email notifications are on, filters out deprecation/notice noise, respects `error_reporting()`, throttles and queues emails, and chains the previous handler.
+* Fix: broken Settings link `href` (missing closing quote) on the plugin list page.
+* Fix: `esc_html_e()` misuse replaced with correct escaping (`esc_html`, `esc_attr`, `esc_url`, `wp_json_encode`-style safe output).
+* Fix: tolerant, case/format-insensitive regex in `debug_add_option` — no more duplicate `define()` creation.
+* Fix: nonce action strings standardized + consistent failure notices (no silent no-op, no `die()`).
+* Fix: read tail capped to 1 MB (was only capping the start offset).
+* Improvements: enqueued CSS instead of inline `<style>` (CSP-friendly), modernized baseline (PHP 7.4+, WP 5.0+), `uninstall.php` cleanup.
+
 = 1.12: Apr 1, 2024 =
 * BugFix: Fix all bug reporting in plugin https://wordpress.org/plugins/plugin-check/.
-* BugFix: Fix dublicate define variable creation error.
+* BugFix: Fix duplicate define variable creation error.
 
 = 1.11: Mar 25, 2024 =
 * BugFix: Cross Site Request Forgery (CSRF) issue.
 
 = 1.10: Jun 29, 2022 =
-* increase security to direct access of files.
+* Increase security for direct access of files.
 
 = 1.9: Dec 15, 2019 =
-* compatible with new version.
+* Compatible with new version.
 
 = 1.7: Mar 2, 2016 =
 * BugFix: Display error not required for email notification enable.
@@ -82,14 +119,9 @@ e.g.
 * Rewrite wp-config.php file with Debug variables.
 * Add: WP_DEBUG, WP_DEBUG_LOG, WP_DEBUG_DISPLAY Functionality.
 
-== A brief Debug ==
-
-Ordered list:
-
-* Debug in wordpress rewrite wp-config.php file via error_log function in php.
-* if you don't have file write permission. so don't use this plugin.
-* keep backup your wp-config file before save plugin setting.
+== Upgrade Notice ==
+= 1.13 =
+Security release: removes the wp-config.php download, adds strict path guards, automatic backups + restore, and a hardened error handler. Upgrade recommended.
 
 = How to contact the support / development team of our Debug plugin =
-You can contact us through,
-https://soninow.com/contact
+You can contact us through, https://soninow.com/contact

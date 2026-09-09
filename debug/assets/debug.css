@@ -1,0 +1,30 @@
+/**
+ * Debug plugin admin styles.
+ *
+ * @package Debug
+ */
+
+.debug-email-field,
+.debug-no-email-field {
+	margin: 4px 0;
+}
+
+.debug-email-field {
+	display: none;
+}
+
+.debug-log-actions {
+	margin: 8px 0;
+}
+
+#debug-log {
+	max-width: 100%;
+	padding: 10px;
+	word-wrap: break-word;
+	background: #1d2327;
+	color: #dcdcde;
+	border-radius: 5px;
+	height: 400px;
+	overflow-y: auto;
+	white-space: pre-wrap;
+}
